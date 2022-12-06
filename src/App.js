@@ -3,7 +3,8 @@ import CoinDetailPages from './pages/CoinDetailPages';
 import CoinSumaryPages from './pages/CoinSumaryPages';
 import './App.css';
 import Header from './Components/Header';
-import { WatchListContext, WatchListContextProvider } from './context/watchListContext';
+import { WatchListContextProvider } from './context/watchListContext';
+
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<CoinSumaryPages />} />
+            <Route path='/coins/:id' element={<CoinDetailPages />} />
           </Routes>
         </BrowserRouter>
       </WatchListContextProvider>
